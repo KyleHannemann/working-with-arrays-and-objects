@@ -18,7 +18,7 @@ let product = {
 }
 
 // code here
-
+var productCopy = {...product};
 
 
 
@@ -30,12 +30,13 @@ let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 // code here
 
-
+var colorsCopy = [...colors]; 
 
 
 ////////// PROBLEM 3 //////////
 
-/* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; and store the value to a variable named result */
+/* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  
+Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; and store the value to a variable named result */
 
 let numbers = [4, 6, 10];
 
@@ -44,7 +45,7 @@ function addNums(num1, num2, num3) {
 }
 
 // code here
-
+result = addNums(...numbers);
 
 ////////// PROBLEM 4 //////////
 
@@ -54,3 +55,4 @@ let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
+combinedArrays = [...arr1, ...arr2];

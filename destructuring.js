@@ -23,6 +23,10 @@ var carDetails = {
 
 //Code Here
 
+var color = carDetails.color;
+var model = carDetails.model;
+var make = carDetails.make;
+var year = carDetails.year;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +39,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+ var title = obj.title;
+ var firstName = obj.firstName;
+ var lastName = obj.lastName; 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,9 +60,18 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+var states = {
+  utah: 10,
+  cal: 110,
+  texas: 10
+}
+function totalPopulation(obj){
+  var totalPop = 0;
+  for (var pop in obj){
+      totalPop += obj[pop];
+  }
+  return totalPop;
+}
 ////////// PROBLEM 4 //////////
 
 /*
@@ -69,7 +84,13 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function ingredients(obj){
+  var nutrients = [];
+  for (var value in obj){
+    nutrients.push(obj[value]);
+  }
+  return nutrients;
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -87,7 +108,24 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function largeNumbers({first, second, third}){
+  if ((first < second) && (first < third)){
+    return first;
+  }
+  if ((second < first) && (second < third)){
+    return second;
+  }
+  if ((third < second) && (third < first)){
+    return third;
+  }
+}
+var z = {
+  first: 4,
+  second: 6,
+  third: 7
+}
+var x = largeNumbers(z);
+x
 
 ////////// PROBLEM 6 //////////
 
@@ -99,4 +137,14 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups({a,b,c}){
+   if ((a.length > b.length) && (a.length > c.length)){
+     return a;
+   }
+   if ((a.length < b.length) && (b.length > c.length)){
+     return b;
+   }
+   if ((c.length > b.length) && (a.length < c.length)){
+     return c;
+   }
+}
